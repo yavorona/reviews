@@ -1,52 +1,84 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
+const LoremIpsum = require("lorem-ipsum").LoremIpsum;
 mongoose.connect("mongodb://localhost/reviews", {
   useUnifiedTopology: true,
   useNewUrlParser: true
 });
 
-var schema = mongoose.Schema({
-  userId: Number,
-  username: String,
-  userLocation: String,
-  numberOfContributions: Number,
-  helpfulVotes: Number,
-  profileImage: String,
-  postDate: Date,
-  reviewScore: Number,
-  reviewTitle: Number,
-  reviewText: String,
-  stayDate: Date
+const schema = mongoose.Schema({
+  hotelId: Number,
+  reviews: [
+    {
+      username: String,
+      userLocation: String,
+      numberOfContributions: Number,
+      helpfulVotes: Number,
+      profileImage: String,
+      postDate: Date,
+      reviewScore: Number,
+      reviewTitle: Number,
+      reviewText: String,
+      stayDate: Date
+    }
+  ]
 });
 
-var Reviews = mongoose.model("Reviews", schema);
+const lorem = new LoremIpsum({
+  sentencesPerParagraph: {
+    max: 8,
+    min: 4
+  },
+  wordsPerSentence: {
+    max: 16,
+    min: 4
+  }
+});
 
+var Review = mongoose.model("Reviews", schema);
 var arrayOfLocations = [
   "Denver",
   "Philadelphia",
   "Sacramento",
   "New York",
-  "San Francisco"
+  "San Francisco",
+  "Toronto",
+  "Wildwood",
+  "Atlanta",
+  "Seattle"
 ];
 
-var getRandomNumber = (min, max) => {
-  return Math.random() * (max - min) + min;
+var randomDate = (start, end) => {
+  return new Date(
+    start.getTime() + Math.random() * (end.getTime() - start.getTime())
+  );
 };
 
-var review = new Reviews({
-  hotelId: 1,
-  reviews: [
-    {
-      userId: 1,
-      username: "user", //to be randomly generater later
-      userLocation:
-        arrayOfLocations[Math.floor(Math.random() * arrayOfLocations.length)],
-      numberOfContributions: Math.floor(Math.random() * Math.floor(40)),
-      helpfulVotes: Math.floor(Math.random() * Math.floor(20)),
-      profileEmage: "imagelink",
-      postDate: "2018-12-12", //to be randomly generated later
-      reviewScore: getRandomNumber(1, 5),
-      reviewText: "Text", //to be randomly generated later
-      stayDate: "2018-12-09" //to be randomly generated later
-    }
-  ]
-});
+var getRandomNumber = (min, max) => {
+  return Math.ceil(Math.random() * (max - min) + min);
+};
+
+var getRandomComment = () => {
+  return {
+    username: "user" + getRandomNumber(1, 400),
+    userLocation:
+      arrayOfLocations[Math.floor(Math.random() * arrayOfLocations.length)],
+    numberOfContributions: Math.floor(Math.random() * Math.floor(40)),
+    helpfulVotes: Math.floor(Math.random() * Math.floor(20)),
+    profileEmage: "avatar.jpeg",
+    postDate: randomDate(new Date(2012, 0, 1), new Date()),
+    reviewScore: getRandomNumber(1, 5),
+    reviewText: lorem.generateSentences(getRandomNumber(3, 10)),
+    stayDate: randomDate(new Date(2012, 0, 1), new Date())
+  };
+};
+for (var i = 0; i < 100; i++) {
+  var randomComments = [];
+  for (var j = 1; j <= getRandomNumber(1, 15); j++) {
+    var randomComment = getRandomComment();
+    randomComments.push(randomComment);
+  }
+  Review.create({
+    hotelId: i,
+    reviews: randomComments
+  });
+}

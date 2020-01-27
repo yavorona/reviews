@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "version": "",
+  "name": "front_end_capstone",
+  "version": "1.0.0",
   "description": "",
   "author": "",
   "license": "",
@@ -8,8 +8,15 @@
     "node": ">=6.13.0"
   },
   "scripts": {
+    "start": "nodemon ./server/index.js",
+    "react-dev": "webpack -d --watch",
+    "seed": "node server/db.js"
   },
   "dependencies": {
+    "express": "^4.17.1",
+    "lorem-ipsum": "^2.0.3",
+    "mongoose": "^5.8.9",
+    "react": "^16.12.0"
   },
   "devDependencies": {
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
