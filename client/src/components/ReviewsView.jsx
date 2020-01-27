@@ -1,4 +1,6 @@
 import React from "react";
+import ReviewsControls from "./ReviewsControls.jsx";
+import Reviews from "./Reviews.jsx";
 
 class ReviewsView extends React.Component {
   constructor(props) {
@@ -6,7 +8,13 @@ class ReviewsView extends React.Component {
   }
 
   render() {
-    return <div>ReviewsView</div>;
+    return (
+      <div>
+        Reviews
+        <ReviewsControls />
+        <Reviews />
+      </div>
+    );
   }
 }
 
