@@ -3,7 +3,9 @@ import Review from "./Review.jsx";
 
 const Reviews = props => (
   <div>
-    <Review />
+    {props.hotelReviewsData.map(review => (
+      <Review review={review} key={review._id} />
+    ))}
   </div>
 );
 

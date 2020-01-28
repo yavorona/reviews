@@ -16,7 +16,7 @@ const schema = mongoose.Schema({
       profileImage: String,
       postDate: Date,
       reviewScore: Number,
-      reviewTitle: Number,
+      reviewTitle: String,
       reviewText: String,
       stayDate: Date
     }
@@ -64,9 +64,10 @@ var getRandomComment = () => {
       arrayOfLocations[Math.floor(Math.random() * arrayOfLocations.length)],
     numberOfContributions: Math.floor(Math.random() * Math.floor(40)),
     helpfulVotes: Math.floor(Math.random() * Math.floor(20)),
-    profileEmage: "avatar.jpeg",
+    profileImage: "avatar.jpeg",
     postDate: randomDate(new Date(2012, 0, 1), new Date()),
     reviewScore: getRandomNumber(1, 5),
+    reviewTitle: lorem.generateWords(2),
     reviewText: lorem.generateSentences(getRandomNumber(3, 10)),
     stayDate: randomDate(new Date(2012, 0, 1), new Date())
   };

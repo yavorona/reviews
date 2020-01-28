@@ -8,7 +8,7 @@ class ReviewsView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hotelReviewsData: {}
+      hotelReviewsData: []
     };
   }
 
@@ -16,9 +16,10 @@ class ReviewsView extends React.Component {
     axios
       .get("/reviews/hotels" + location.pathname)
       .then(response => {
+        console.log("here is your response", response.data.reviews);
         // handle success
         this.setState({
-          hotelReviewsData: response.data
+          hotelReviewsData: response.data.reviews
         });
       })
       .catch(error => {
@@ -28,6 +29,7 @@ class ReviewsView extends React.Component {
   }
 
   render() {
+    console.log("here is what you render", this.state.hotelReviewsData);
     return (
       <div>
         Reviews
