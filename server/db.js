@@ -82,3 +82,9 @@ for (var i = 0; i < 100; i++) {
     reviews: randomComments
   });
 }
+
+module.exports = {
+  getReviewsbyID: (id, callback) => {
+    Review.findOne({ hotelId: id }, callback);
+  }
+};
