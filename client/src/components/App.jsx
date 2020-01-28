@@ -19,13 +19,17 @@ class App extends React.Component {
     return (
       <div>
         <div className="nav">
-          <span
-            className={
-              this.state.view === "reviews" ? "nav-selected" : "nav-unselected"
-            }
-            onClick={() => this.changeView("reviews")}
-          >
-            Reviews
+          <span>
+            <span
+              className={
+                this.state.view === "reviews"
+                  ? "nav-selected"
+                  : "nav-unselected"
+              }
+              onClick={() => this.changeView("reviews")}
+            >
+              Reviews
+            </span>
           </span>
           <span
             className={
@@ -46,7 +50,7 @@ class App extends React.Component {
             Room tips
           </span>
         </div>
-        <div classname="main">
+        <div className="main">
           {this.state.view === "reviews" ? <ReviewsView /> : "IN PRODUCTION"}
         </div>
       </div>
