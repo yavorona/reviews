@@ -1,0 +1,23 @@
+.nav {
+  margin: 0px;
+  padding: 20px;
+  justify-content: flex-end;
+  align-items: left;
+  color: #078171;
+  font-size: 14px;
+}
+.nav-selected {
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+  margin-right: 5px;
+  /* font-size: 14px; */
+  background-color: #fff;
+}
+
+.nav-unselected {
+  padding: 5px;
+  margin-right: 5px;
+  /* font-size: 14px; */
+  background-color: #f9f9f9;
+}
