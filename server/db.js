@@ -10,6 +10,7 @@ const schema = mongoose.Schema({
   reviews: [
     {
       username: String,
+      travelerType: String,
       userLocation: String,
       numberOfContributions: Number,
       helpfulVotes: Number,
@@ -46,6 +47,13 @@ var arrayOfLocations = [
   "Atlanta",
   "Seattle"
 ];
+var arrayOfTravelerTypes = [
+  "Families",
+  "Couples",
+  "Solo",
+  "Business",
+  "Friends"
+];
 
 var randomDate = (start, end) => {
   return new Date(
@@ -60,6 +68,10 @@ var getRandomNumber = (min, max) => {
 var getRandomComment = () => {
   return {
     username: "user" + getRandomNumber(1, 400),
+    travelerType:
+      arrayOfTravelerTypes[
+        Math.floor(Math.random() * arrayOfTravelerTypes.length)
+      ],
     userLocation:
       arrayOfLocations[Math.floor(Math.random() * arrayOfLocations.length)],
     numberOfContributions: Math.floor(Math.random() * Math.floor(40)),
