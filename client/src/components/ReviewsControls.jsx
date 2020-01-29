@@ -10,7 +10,14 @@ import React from "react";
 class ReviewsControls extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      isExcellent: false
+    };
+    this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
+  }
+
+  handleRatingFilterChange(e) {
+    this.props.handleRatingFilterChange(parseInt(e.target.value));
   }
 
   render() {
@@ -36,9 +43,9 @@ class ReviewsControls extends React.Component {
                     <input
                       name="excellent"
                       type="checkbox"
-                      //value=
-                      // checked={this.state.excellent}
-                      // onChange={this.handleInputExcellent}
+                      value="5"
+                      checked={this.props.currentRatingFilters.has(5)}
+                      onChange={this.handleRatingFilterChange}
                     />
                     Excellent
                     <span className="review-rating-bar-cell">
@@ -54,9 +61,9 @@ class ReviewsControls extends React.Component {
                     <input
                       name="very-good"
                       type="checkbox"
-                      //value=
-                      // checked={this.state.veryGood}
-                      // onChange={this.handleInputVeryGood}
+                      value="4"
+                      checked={this.props.currentRatingFilters.has(4)}
+                      onChange={this.handleRatingFilterChange}
                     />
                     Very Good
                     <span className="review-rating-bar-cell">
@@ -72,9 +79,9 @@ class ReviewsControls extends React.Component {
                     <input
                       name="average"
                       type="checkbox"
-                      //value=
-                      // checked={this.state.average}
-                      // onChange={this.handleInputAverage}
+                      value="3"
+                      checked={this.props.currentRatingFilters.has(3)}
+                      onChange={this.handleRatingFilterChange}
                     />
                     Average
                     <span className="review-rating-bar-cell">
@@ -90,9 +97,9 @@ class ReviewsControls extends React.Component {
                     <input
                       name="poor"
                       type="checkbox"
-                      //value=
-                      // checked={this.state.poor}
-                      // onChange={this.handleInputPoor}
+                      value="2"
+                      checked={this.props.currentRatingFilters.has(2)}
+                      onChange={this.handleRatingFilterChange}
                     />
                     Poor
                     <span className="review-rating-bar-cell">
@@ -108,9 +115,9 @@ class ReviewsControls extends React.Component {
                     <input
                       name="terrible"
                       type="checkbox"
-                      //value=
-                      // checked={this.state.terrible}
-                      // onChange={this.handleInputTerrible}
+                      value="1"
+                      checked={this.props.currentRatingFilters.has(1)}
+                      onChange={this.handleRatingFilterChange}
                     />
                     Terrible
                     <span className="review-rating-bar-cell">

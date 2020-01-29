@@ -8,8 +8,26 @@ class ReviewsView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hotelReviewsData: []
+      hotelReviewsData: [],
+      currentRatingFilters: new Set([])
     };
+    this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
+  }
+
+  handleRatingFilterChange(filterValue) {
+    if (this.state.currentRatingFilters.has(filterValue)) {
+      var newCurrentRatingFilters = this.state.currentRatingFilters;
+      newCurrentRatingFilters.delete(filterValue);
+      this.setState({
+        currentRatingFilters: newCurrentRatingFilters
+      });
+    } else {
+      var newCurrentRatingFilters = this.state.currentRatingFilters;
+      newCurrentRatingFilters.add(filterValue);
+      this.setState({
+        currentRatingFilters: newCurrentRatingFilters
+      });
+    }
   }
 
   componentDidMount() {
@@ -29,12 +47,23 @@ class ReviewsView extends React.Component {
   }
 
   render() {
+    var filteredReviews = this.state.hotelReviewsData;
+    if (this.state.currentRatingFilters.size !== 0) {
+      filteredReviews = filteredReviews.filter(review =>
+        this.state.currentRatingFilters.has(review.reviewScore)
+      );
+    }
+
     console.log("here is what you render", this.state.hotelReviewsData);
     return (
       <div>
         Reviews
-        <ReviewsControls />
-        <Reviews hotelReviewsData={this.state.hotelReviewsData} />
+        <ReviewsControls
+          hotelReviewsData={this.state.hotelReviewsData}
+          currentRatingFilters={this.state.currentRatingFilters}
+          handleRatingFilterChange={this.handleRatingFilterChange}
+        />
+        <Reviews hotelReviewsData={filteredReviews} />
       </div>
     );
   }
