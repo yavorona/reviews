@@ -6,11 +6,11 @@ class TravelerTypeFilter extends React.Component {
     this.state = {
       isExcellent: false
     };
-    this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleRatingFilterChange(e) {
-    this.props.handleRatingFilterChange(parseInt(e.target.value));
+  handleChange(e) {
+    this.props.handleTravalersTypeFilterChange(e.target.value);
   }
 
   render() {
@@ -23,9 +23,9 @@ class TravelerTypeFilter extends React.Component {
               <input
                 name="families"
                 type="checkbox"
-                //value=
-                // checked={this.state.families}
-                // onChange={this.handleInputFamilies}
+                value="Families"
+                checked={this.props.currentTravelerTypeFilters.has("Families")}
+                onChange={this.handleChange}
               />
               Families
             </label>
@@ -35,9 +35,9 @@ class TravelerTypeFilter extends React.Component {
               <input
                 name="couples"
                 type="checkbox"
-                //value=
-                // checked={this.state.families}
-                // onChange={this.handleInputFamilies}
+                value="Couples"
+                checked={this.props.currentTravelerTypeFilters.has("Couples")}
+                onChange={this.handleChange}
               />
               Couples
             </label>
@@ -47,9 +47,9 @@ class TravelerTypeFilter extends React.Component {
               <input
                 name="solo"
                 type="checkbox"
-                //value=
-                // checked={this.state.solo}
-                // onChange={this.handleInputSolo}
+                value="Solo"
+                checked={this.props.currentTravelerTypeFilters.has("Solo")}
+                onChange={this.handleChange}
               />
               Solo
             </label>
@@ -59,9 +59,9 @@ class TravelerTypeFilter extends React.Component {
               <input
                 name="business"
                 type="checkbox"
-                //value=
-                // checked={this.state.business}
-                // onChange={this.handleInputbBsiness}
+                value="Business"
+                checked={this.props.currentTravelerTypeFilters.has("Business")}
+                onChange={this.handleChange}
               />
               Business
             </label>
@@ -71,9 +71,9 @@ class TravelerTypeFilter extends React.Component {
               <input
                 name="friends"
                 type="checkbox"
-                //value=
-                // checked={this.state.friends}
-                // onChange={this.handleInputFriends}
+                value="Friends"
+                checked={this.props.currentTravelerTypeFilters.has("Friends")}
+                onChange={this.handleChange}
               />
               Friends
             </label>

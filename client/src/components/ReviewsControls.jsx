@@ -3,20 +3,10 @@ import RatingsFilter from "./RatingsFilter.jsx";
 import TimeOfYearFilter from "./TimeOfYearFilter.jsx";
 import TravelerTypeFilter from "./TravelerTypeFilter.jsx";
 import LanguageTypeFilter from "./LanguageTypeFilter.jsx";
-// import {
-//   DropdownButton,
-//   Dropdown,
-//   DropdownMenu,
-//   DropdownToggle,
-//   DropdownItem
-// } from "reactstrap";
 
 class ReviewsControls extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isExcellent: false
-    };
     this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
   }
 
@@ -42,8 +32,18 @@ class ReviewsControls extends React.Component {
               currentRatingFilters={this.props.currentRatingFilters}
               handleRatingFilterChange={this.props.handleRatingFilterChange}
             />
-            <TimeOfYearFilter />
-            <TravelerTypeFilter />
+            <TimeOfYearFilter
+              currentTimeOfYearFilters={this.props.currentTimeOfYearFilters}
+              handleTimeOfYearFilterChange={
+                this.props.handleTimeOfYearFilterChange
+              }
+            />
+            <TravelerTypeFilter
+              currentTravelerTypeFilters={this.props.currentTravelerTypeFilters}
+              handleTravalersTypeFilterChange={
+                this.props.handleTravalersTypeFilterChange
+              }
+            />
             <LanguageTypeFilter />
           </div>
         </div>
