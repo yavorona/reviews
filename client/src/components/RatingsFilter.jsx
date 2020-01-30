@@ -16,7 +16,7 @@ class RatingsFilter extends React.Component {
         <div className="filter-header">Traveler rating</div>
         <ul className="filter-table">
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="excellent"
                 type="checkbox"
@@ -24,12 +24,8 @@ class RatingsFilter extends React.Component {
                 checked={this.props.currentRatingFilters.has(5)}
                 onChange={this.handleRatingFilterChange}
               />
-              Excellent &nbsp;
-              <span className="review-rating-bar-cell">
-                <span className="review-rating-bar">
-                  <span className="rowfill"></span>
-                </span>
-              </span>
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;Excellent &nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
@@ -41,7 +37,7 @@ class RatingsFilter extends React.Component {
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="very-good"
                 type="checkbox"
@@ -49,12 +45,8 @@ class RatingsFilter extends React.Component {
                 checked={this.props.currentRatingFilters.has(4)}
                 onChange={this.handleRatingFilterChange}
               />
-              Very Good
-              <span className="review-rating-bar-cell">
-                <span className="review-rating-bar">
-                  <span className="rowfill"></span>
-                </span>
-              </span>
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;Very Good &nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
@@ -66,7 +58,7 @@ class RatingsFilter extends React.Component {
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="average"
                 type="checkbox"
@@ -74,24 +66,20 @@ class RatingsFilter extends React.Component {
                 checked={this.props.currentRatingFilters.has(3)}
                 onChange={this.handleRatingFilterChange}
               />
-              Average&nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="review-rating-bar-cell">
-                <span className="review-rating-bar">
-                  <span className="rowfill"></span>
-                </span>
-              </span>
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
-                  value="2"
+                  value="11"
                   max="20"
                 ></progress>
-                &nbsp;&nbsp;&nbsp;2
+                &nbsp;&nbsp;&nbsp;11
               </span>
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="poor"
                 type="checkbox"
@@ -99,24 +87,21 @@ class RatingsFilter extends React.Component {
                 checked={this.props.currentRatingFilters.has(2)}
                 onChange={this.handleRatingFilterChange}
               />
-              Poor&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="review-rating-bar-cell">
-                <span className="review-rating-bar">
-                  <span className="rowfill"></span>
-                </span>
-              </span>
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;Poor
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
-                  value="5"
+                  value="7"
                   max="20"
                 ></progress>
-                &nbsp;&nbsp;&nbsp;5
+                &nbsp;&nbsp;&nbsp;7
               </span>
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="terrible"
                 type="checkbox"
@@ -124,19 +109,16 @@ class RatingsFilter extends React.Component {
                 checked={this.props.currentRatingFilters.has(1)}
                 onChange={this.handleRatingFilterChange}
               />
-              Terrible&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="review-rating-bar-cell">
-                <span className="review-rating-bar">
-                  <span className="rowfill"></span>
-                </span>
-              </span>
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;Terrible
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
-                  value="1"
+                  value="4"
                   max="20"
                 ></progress>
-                &nbsp;&nbsp;&nbsp;1
+                &nbsp;&nbsp;&nbsp;4
               </span>
             </label>
           </li>
