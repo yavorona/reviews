@@ -19,7 +19,7 @@ class LanguageTypeFilter extends React.Component {
         <div className="filter-header">Language</div>
         <ul className="filter-table">
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="all-languages"
                 type="checkbox"
@@ -27,7 +27,9 @@ class LanguageTypeFilter extends React.Component {
                 // checked={this.state.enlgish}
                 // onChange={this.handleInputEnglish}
               />
-              All languages
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All
+              languages&nbsp;&nbsp;&nbsp;
             </label>
           </li>
         </ul>

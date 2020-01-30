@@ -135,8 +135,6 @@ body {
 .filter-header {
   padding-top: 6px;
   padding-left: 20px;
-  margin-bottom: 5px;
-  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   color: #000a12;
@@ -285,6 +283,7 @@ body {
 .review-stay-data {
   padding-top: 30px;
   padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .dots {
@@ -312,7 +311,7 @@ body {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
   cursor: pointer;
   font-size: 14px;
   -webkit-user-select: none;
@@ -337,15 +336,14 @@ body {
   left: 20px;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  border-radius: 2px;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4a4a4a;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a green background */
 .container input:checked ~ .checkmark {
   background-color: #078171;
 }

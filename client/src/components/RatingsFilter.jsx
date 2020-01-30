@@ -25,7 +25,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;Excellent &nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excellent &nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
@@ -46,7 +46,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;Very Good &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good &nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
@@ -67,7 +67,8 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;Average &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Average
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress-bar"
@@ -88,7 +89,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;Poor
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poor
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
@@ -110,7 +111,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;Terrible
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terrible
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress

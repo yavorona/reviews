@@ -33,19 +33,20 @@ class TimeOfYearFilter extends React.Component {
         <div className="filter-header">Time of year</div>
         <ul className="filter-table">
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
-                name="mar-may"
+                name="sep-nov"
                 type="checkbox"
                 value={[3, 4, 5]}
                 checked={this.checkFilter([3, 4, 5])}
                 onChange={this.handleChange}
               />
-              Mar-May
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mar-May&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="jun-aug"
                 type="checkbox"
@@ -53,11 +54,12 @@ class TimeOfYearFilter extends React.Component {
                 checked={this.checkFilter([6, 7, 8])}
                 onChange={this.handleChange}
               />
-              Jun-Aug
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jun-Aug&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="sep-nov"
                 type="checkbox"
@@ -65,11 +67,12 @@ class TimeOfYearFilter extends React.Component {
                 checked={this.checkFilter([9, 10, 11])}
                 onChange={this.handleChange}
               />
-              Sep-Nov
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sep-Nov&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="dec-feb"
                 type="checkbox"
@@ -77,7 +80,8 @@ class TimeOfYearFilter extends React.Component {
                 checked={this.checkFilter([12, 1, 2])}
                 onChange={this.handleChange}
               />
-              Dec-Feb
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dec-Feb&nbsp;&nbsp;&nbsp;
             </label>
           </li>
         </ul>
