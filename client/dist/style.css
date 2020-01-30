@@ -11,13 +11,137 @@
   color: black;
   font-weight: bold;
   margin-right: 5px;
-  /* font-size: 14px; */
   background-color: #fff;
 }
 
 .nav-unselected {
   padding: 5px;
   margin-right: 5px;
-  /* font-size: 14px; */
   background-color: #f9f9f9;
+}
+
+.review-header {
+  position: relative;
+  background-color: #fff;
+  border-width: 0 1px 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+  padding: 8px 8px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-divider {
+  border-width: 0 0 1px;
+  border-style: solid;
+  border-color: #e5e5e5;
+}
+
+.review-header-text {
+  font-size: 28px;
+}
+.write-review-button {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 700;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  border-color: #078171;
+  border-radius: 3px;
+  background-color: #078171;
+  color: #fff;
+}
+.review-filters-wrap {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.filter-header {
+  padding-top: 6px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #000a12;
+}
+
+.checkbox {
+  list-style: none;
+  border-spacing: 0 1px;
+  font-size: 14px;
+  display: table-row;
+  /* text-align: -webkit-match-parent; */
+}
+.checkbox label {
+  padding-left: 24px;
+  box-sizing: content-box;
+}
+
+.ui_columns {
+  display: flex;
+}
+
+.rating {
+  flex: none;
+  width: 41.66666667%;
+  padding: 12px;
+}
+.time-of-the-year {
+  flex: none;
+  width: 16.66666667%;
+  padding: 12px;
+}
+
+.traveler-type {
+  /* display: block; */
+  flex: none;
+  width: 16.66666667%;
+  padding: 12px;
+}
+.language {
+  flex: none;
+  width: 25%;
+  padding: 12px;
+}
+
+.filter-table {
+  display: inline-block;
+  width: 100%;
+  border-spacing: 0 12px;
+  font-size: 14px;
+}
+.review-rating-bar-cell {
+  display: table-cell;
+  width: 100%;
+  padding-left: 12px;
+}
+.review-rating-bar {
+  background: #e5e5e5 none repeat scroll 0 0;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: -1px;
+  cursor: pointer;
+  top: 3px;
+}
+
+.rowfill {
+  background: #078171 none repeat scroll 0 0;
+  display: inline-block;
+  height: 100%;
+  vertical-align: text-top;
+  border-radius: 2px;
 }
