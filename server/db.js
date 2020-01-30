@@ -67,7 +67,7 @@ var getRandomNumber = (min, max) => {
 
 var getRandomComment = () => {
   return {
-    username: "user" + getRandomNumber(1, 400),
+    username: "kenny" + getRandomNumber(1, 400),
     travelerType:
       arrayOfTravelerTypes[
         Math.floor(Math.random() * arrayOfTravelerTypes.length)

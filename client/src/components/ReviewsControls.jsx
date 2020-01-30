@@ -27,7 +27,7 @@ class ReviewsControls extends React.Component {
         </div>
 
         <div className="review-filters-wrap">
-          <div className="ui_columns">
+          <div className="ui-columns">
             <RatingsFilter
               currentRatingFilters={this.props.currentRatingFilters}
               handleRatingFilterChange={this.props.handleRatingFilterChange}
