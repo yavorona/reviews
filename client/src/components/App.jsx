@@ -17,29 +17,36 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <div className="nav">
-          <span>
-            <span
-              className={
-                this.state.view === "reviews"
-                  ? "nav-selected"
-                  : "nav-unselected"
-              }
-              onClick={() => this.changeView("reviews")}
-            >
-              Reviews
-            </span>
-          </span>
-          <span
+          <div
+            className={
+              this.state.view === "reviews" ? "nav-selected" : "nav-unselected"
+            }
+            onClick={() => this.changeView("reviews")}
+          >
+            <div className="tab-icon">
+              <img className="nav-icon" src="pen-and-paper.png"></img>
+            </div>
+            <div className="tab-name">
+              <span>Reviews</span>
+            </div>
+          </div>
+          <div
             className={
               this.state.view === "q&a" ? "nav-selected" : "nav-unselected"
             }
             onClick={() => this.changeView("q&a")}
           >
-            Q+A
-          </span>
-          <span
+            <div className="tab-icon">
+              <img className="nav-icon" src="q_and_a.png"></img>
+            </div>
+            <div className="tab-name">
+              <span>Q+A</span>
+            </div>
+          </div>
+
+          <div
             className={
               this.state.view === "room_tips"
                 ? "nav-selected"
@@ -47,8 +54,13 @@ class App extends React.Component {
             }
             onClick={() => this.changeView("room_tips")}
           >
-            Room tips
-          </span>
+            <div className="tab-icon">
+              <img className="nav-icon" src="lightbolb.png"></img>
+            </div>
+            <div className="tab-name">
+              <span>Room tips</span>
+            </div>
+          </div>
         </div>
         <div className="main">
           {this.state.view === "reviews" ? <ReviewsView /> : "IN PRODUCTION"}

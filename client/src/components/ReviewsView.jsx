@@ -130,8 +130,7 @@ class ReviewsView extends React.Component {
     var filteredReviews = this.getFilterReviews();
     console.log("here is what you render", this.state.hotelReviewsData);
     return (
-      <div>
-        Reviews
+      <div className="reviews-view">
         <ReviewsControls
           hotelReviewsData={this.state.hotelReviewsData}
           currentRatingFilters={this.state.currentRatingFilters}
