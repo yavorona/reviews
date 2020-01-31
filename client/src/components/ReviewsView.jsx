@@ -11,7 +11,8 @@ class ReviewsView extends React.Component {
       hotelReviewsData: [],
       currentRatingFilters: new Set([]),
       currentTravelerTypeFilters: new Set([]),
-      currentTimeOfYearFilters: new Set([])
+      currentTimeOfYearFilters: new Set([]),
+      currentLanguageFilters: new Set([])
     };
     this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
     this.handleTravalersTypeFilterChange = this.handleTravalersTypeFilterChange.bind(

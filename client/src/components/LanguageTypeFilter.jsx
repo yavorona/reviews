@@ -6,11 +6,6 @@ class LanguageTypeFilter extends React.Component {
     this.state = {
       isExcellent: false
     };
-    this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
-  }
-
-  handleRatingFilterChange(e) {
-    this.props.handleRatingFilterChange(parseInt(e.target.value));
   }
 
   render() {
@@ -20,7 +15,7 @@ class LanguageTypeFilter extends React.Component {
         <ul className="filter-table">
           <li className="checkbox">
             <label className="language-container">
-              <input name="all-languages" type="checkbox" checked="checked" />
+              <input name="all-languages" type="checkbox" defaultChecked />
               <span className="language-checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All
               languages&nbsp;&nbsp;&nbsp;
