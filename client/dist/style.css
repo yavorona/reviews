@@ -44,6 +44,7 @@ body {
 }
 
 .tab-name {
+  font-family: Tahoma;
   text-align: center;
 }
 
@@ -90,6 +91,7 @@ body {
 
 .review-header-text {
   font-size: 28px;
+  font-family: Tahoma;
 }
 .write-review-button {
   position: relative;
@@ -509,16 +511,3 @@ body {
   border-radius: 70%;
   background: white;
 }
-
-/* Style the checkmark/indicator */
-/* .language-container .language-checkmark:after {
-  left: 3px;
-  top: 1px;
-  width: 5px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-} */
