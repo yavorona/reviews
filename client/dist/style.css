@@ -446,3 +446,79 @@ body {
   text-decoration: underline;
   color: #078171;
 }
+
+.language-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.language-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.language-checkmark {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4a4a4a;
+}
+
+/* When the radio button is checked, add a blue background */
+.language-container input:checked ~ .language-checkmark {
+  background-color: #078171;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.language-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.language-container input:checked ~ .language-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.language-container .language-checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 70%;
+  background: white;
+}
+
+/* Style the checkmark/indicator */
+/* .language-container .language-checkmark:after {
+  left: 3px;
+  top: 1px;
+  width: 5px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+} */
