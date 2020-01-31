@@ -2,23 +2,23 @@ import React from "react";
 var moment = require("moment");
 moment().format();
 
-const Review = props => {
+const Review = ({ review }) => {
   let score;
-  let stayDate = moment(props.review.stayDate).fromNow();
-  let postDate = moment(props.review.postDate).fromNow();
-  if (props.review.reviewScore === 5) {
+  let stayDate = moment(review.stayDate).fromNow();
+  let postDate = moment(review.postDate).fromNow();
+  if (review.reviewScore === 5) {
     score = <img src="five-star.png"></img>;
   }
-  if (props.review.reviewScore === 4) {
+  if (review.reviewScore === 4) {
     score = <img src="four-star.png"></img>;
   }
-  if (props.review.reviewScore === 3) {
+  if (review.reviewScore === 3) {
     score = <img src="three-star.png"></img>;
   }
-  if (props.review.reviewScore === 2) {
+  if (review.reviewScore === 2) {
     score = <img src="two-star.png"></img>;
   }
-  if (props.review.reviewScore === 1) {
+  if (review.reviewScore === 1) {
     score = <img src="one-star.png"></img>;
   }
 
@@ -26,10 +26,10 @@ const Review = props => {
     <div className="review-wrapper">
       <div className="single-review-header">
         <div className="avatar">
-          <img src={props.review.profileImage}></img>
+          <img src={review.profileImage}></img>
         </div>
         <div className="user-info">
-          <span className="username">{props.review.username}</span>
+          <span className="username">{review.username}</span>
           <span className="review-date"> wrote a review {postDate}</span>
           <span>
             <img className="dots" src="dots.png"></img>
@@ -38,19 +38,19 @@ const Review = props => {
 
         <div className="user-info">
           <ul className="user-list">
-            <li>{props.review.userLocation}</li>
+            <li>{review.userLocation}</li>
             <li>
-              {props.review.numberOfContributions}
+              {review.numberOfContributions}
               &nbsp;contributions
             </li>
-            <li>{props.review.helpfulVotes}&nbsp;helpful votes</li>
+            <li>{review.helpfulVotes}&nbsp;helpful votes</li>
           </ul>
         </div>
       </div>
       <div className="review-body">
         <div className="review-score">{score}</div>
-        <div className="review-title">{props.review.reviewTitle}</div>
-        <div className="review-text">{props.review.reviewText}</div>
+        <div className="review-title">{review.reviewTitle}</div>
+        <div className="review-text">{review.reviewText}</div>
         <div className="review-stay-data">
           <span className="date-of-stay">Date of stay: </span>
           <span className="stay-date">{stayDate}</span>
