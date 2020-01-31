@@ -27,11 +27,7 @@ class RatingsFilter extends React.Component {
               <span className="checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excellent &nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress
-                  className="progress-bar"
-                  value="15"
-                  max="20"
-                ></progress>
+                <progress className="progress" value="15" max="20"></progress>
                 &nbsp;&nbsp;&nbsp;15
               </span>
             </label>
@@ -48,11 +44,7 @@ class RatingsFilter extends React.Component {
               <span className="checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good &nbsp;
               <span className="rownumber">
-                <progress
-                  className="progress-bar"
-                  value="4"
-                  max="20"
-                ></progress>
+                <progress className="progress" value="4" max="20"></progress>
                 &nbsp;&nbsp;&nbsp;4
               </span>
             </label>
@@ -70,11 +62,7 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Average
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress
-                  className="progress-bar"
-                  value="11"
-                  max="20"
-                ></progress>
+                <progress className="progress" value="11" max="20"></progress>
                 &nbsp;&nbsp;&nbsp;11
               </span>
             </label>
@@ -92,11 +80,7 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poor
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress
-                  className="progress-bar"
-                  value="7"
-                  max="20"
-                ></progress>
+                <progress className="progress" value="7" max="20"></progress>
                 &nbsp;&nbsp;&nbsp;7
               </span>
             </label>
@@ -114,11 +98,7 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terrible
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress
-                  className="progress-bar"
-                  value="4"
-                  max="20"
-                ></progress>
+                <progress className="progress" value="4" max="20"></progress>
                 &nbsp;&nbsp;&nbsp;4
               </span>
             </label>

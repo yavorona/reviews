@@ -142,10 +142,18 @@ body {
   color: #000a12;
 }
 
-.progress-bar {
-  background: #078171;
+.progress {
   border-radius: 2px;
   height: 12px;
+}
+
+.progress::-webkit-progress-bar {
+  background: #e5e5e5;
+  border-radius: 2px;
+}
+.progress::-webkit-progress-value {
+  background: #078171;
+  border-radius: 2px;
 }
 .checkbox {
   list-style: none;
