@@ -115,14 +115,11 @@ class ReviewsView extends React.Component {
     axios
       .get("/reviews/hotels" + location.pathname)
       .then(response => {
-        console.log("here is your response", response.data.reviews);
-        // handle success
         this.setState({
           hotelReviewsData: response.data.reviews
         });
       })
       .catch(error => {
-        // handle error
         console.log(error);
       });
   }

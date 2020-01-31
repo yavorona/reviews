@@ -26,7 +26,7 @@ const Review = ({ review }) => {
     <div className="review-wrapper">
       <div className="single-review-header">
         <div className="avatar">
-          <img src={review.profileImage}></img>
+          <img className="avatar-image" src={review.profileImage}></img>
         </div>
         <div className="user-info">
           <span className="username">{review.username}</span>
@@ -38,12 +38,14 @@ const Review = ({ review }) => {
 
         <div className="user-info">
           <ul className="user-list">
-            <li>{review.userLocation}</li>
-            <li>
+            <li className="user-location">{review.userLocation}</li>
+            <li className="user-contribution">
               {review.numberOfContributions}
               &nbsp;contributions
             </li>
-            <li>{review.helpfulVotes}&nbsp;helpful votes</li>
+            <li className="helpful-votes">
+              {review.helpfulVotes}&nbsp;helpful votes
+            </li>
           </ul>
         </div>
       </div>
