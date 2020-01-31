@@ -55,8 +55,21 @@ const Review = props => {
           <span className="date-of-stay">Date of stay: </span>
           <span className="stay-date">{stayDate}</span>
         </div>
+        <div className="review-disclaimer">
+          This review is the subjective opinion of a TripAdvisor member and not
+          of TripAdvisor LLC.
+        </div>
       </div>
-      <div className="review-bottom"></div>
+      <div className="review-bottom">
+        <span className="helpful">
+          <img className="thumb-up" src="thumbup.png"></img>
+          <span className="helpful-text">Helpful</span>
+        </span>
+        <span className="share-info">
+          <img className="share" src="share.png"></img>
+          <span className="share-text">Share</span>
+        </span>
+      </div>
     </div>
   );
 };

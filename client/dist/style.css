@@ -40,6 +40,7 @@ body {
   color: black;
   background-color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tab-name {
@@ -52,11 +53,12 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(0%, auto);
   background-color: #f9f9f9;
+  cursor: pointer;
 }
 
 .nav-icon {
   grid-row: 1/2;
-  max-width: 30px;
+  max-width: 50px;
   height: auto;
   width: auto;
   height: auto;
@@ -234,17 +236,25 @@ body {
 .review-body {
   background-color: #f9f9f9;
 }
-
+.username:hover {
+  text-decoration: underline;
+  cursor: hand;
+  cursor: pointer;
+}
 .username,
 .date-of-stay {
   font-weight: 700;
   color: #000a12;
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 18px;
 }
 .review-date,
 .stay-date {
   font-size: 14px;
   line-height: 18px;
   color: #4a4a4a;
+  font-family: Tahoma;
 }
 .user-list li {
   float: left;
@@ -269,8 +279,10 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
+  font-family: Tahoma;
   line-height: 22px;
   color: #000a12;
+  cursor: pointer;
 }
 .review-text {
   padding-left: 10px;
@@ -278,12 +290,14 @@ body {
   color: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
+  font-family: Tahoma;
 }
 
 .review-stay-data {
   padding-top: 30px;
   padding-left: 10px;
   padding-bottom: 10px;
+  font-family: Tahoma;
 }
 
 .dots {
@@ -362,13 +376,65 @@ body {
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 5px;
-  top: 3px;
+  left: 3px;
+  top: 1px;
   width: 5px;
-  height: 5px;
+  height: 8px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.review-bottom {
+  padding-left: 10px;
+  position: relative;
+  padding-top: 15px;
+  position: center;
+}
+.helpful-text {
+  padding-left: 30px;
+  padding-right: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000a12;
+  font-family: Tahoma;
+}
+
+.thumb-up {
+  position: absolute;
+  bottom: 23px;
+}
+.share-text {
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000a12;
+  font-family: Tahoma;
+}
+.share {
+  position: absolute;
+  bottom: 25px;
+}
+
+.review-disclaimer {
+  padding-left: 10px;
+  color: #767676;
+  font-size: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-style: italic;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 6px;
+}
+
+.share-text:hover,
+.helpful-text:hover {
+  cursor: hand;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #078171;
 }

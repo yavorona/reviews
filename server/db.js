@@ -26,12 +26,12 @@ const schema = mongoose.Schema({
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
-    max: 8,
-    min: 4
+    max: 30,
+    min: 10
   },
   wordsPerSentence: {
-    max: 16,
-    min: 4
+    max: 20,
+    min: 8
   }
 });
 
@@ -77,11 +77,11 @@ var getRandomComment = () => {
     numberOfContributions: Math.floor(Math.random() * Math.floor(40)),
     helpfulVotes: Math.floor(Math.random() * Math.floor(20)),
     profileImage: "avatar.jpeg",
-    postDate: randomDate(new Date(2012, 0, 1), new Date()),
+    postDate: randomDate(new Date(2019, 0, 1), new Date()),
     reviewScore: getRandomNumber(1, 5),
     reviewTitle: lorem.generateWords(2),
     reviewText: lorem.generateSentences(getRandomNumber(3, 10)),
-    stayDate: randomDate(new Date(2012, 0, 1), new Date())
+    stayDate: randomDate(new Date(2019, 0, 1), new Date())
   };
 };
 for (var i = 0; i < 100; i++) {
