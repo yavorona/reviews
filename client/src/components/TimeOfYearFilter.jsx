@@ -3,9 +3,6 @@ import React from "react";
 class TimeOfYearFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isExcellent: false
-    };
     this.handleChange = this.handleChange.bind(this);
     this.checkFilter = this.checkFilter.bind(this);
   }
@@ -35,6 +32,7 @@ class TimeOfYearFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="mar-may-checkbox"
                 name="sep-nov"
                 type="checkbox"
                 value={[3, 4, 5]}
@@ -48,6 +46,7 @@ class TimeOfYearFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="jun-aug-checkbox"
                 name="jun-aug"
                 type="checkbox"
                 value={[6, 7, 8]}
@@ -61,6 +60,7 @@ class TimeOfYearFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="sep-nov-checkbox"
                 name="sep-nov"
                 type="checkbox"
                 value={[9, 10, 11]}
@@ -74,6 +74,7 @@ class TimeOfYearFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="dec-feb-checkbox"
                 name="dec-feb"
                 type="checkbox"
                 value={[12, 1, 2]}

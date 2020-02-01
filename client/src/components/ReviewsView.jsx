@@ -1,7 +1,7 @@
 import React from "react";
 import ReviewsControls from "./ReviewsControls.jsx";
 import Reviews from "./Reviews.jsx";
-import { set } from "mongoose";
+// import { set } from "mongoose";
 const axios = require("axios");
 
 class ReviewsView extends React.Component {
@@ -126,7 +126,6 @@ class ReviewsView extends React.Component {
 
   render() {
     var filteredReviews = this.getFilterReviews();
-    console.log("here is what you render", this.state.hotelReviewsData);
     return (
       <div className="reviews-view">
         <ReviewsControls

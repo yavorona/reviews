@@ -1,5 +1,5 @@
 import React from "react";
-import { shallow, mount, render } from "../../enzyme";
+import Enzyme from "enzyme";
 import Review from "../Review";
 var moment = require("moment");
 moment().format();
@@ -18,8 +18,9 @@ describe("Review", () => {
     stayDate: "2002-12-09"
   };
   it("displays username", () => {
+    //try with contains
     const wrapper = shallow(<Review review={review} />);
-    expect(wrapper.find(".username").text()).toEqual("kenny");
+    expect(wrapper.contains("kenny")).toEqual(true);
   });
   it("displays user location", () => {
     const wrapper = shallow(<Review review={review} />);

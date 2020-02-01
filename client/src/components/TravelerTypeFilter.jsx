@@ -21,6 +21,7 @@ class TravelerTypeFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="families-checkbox"
                 name="families"
                 type="checkbox"
                 value="Families"
@@ -34,6 +35,7 @@ class TravelerTypeFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="couples-checkbox"
                 name="couples"
                 type="checkbox"
                 value="Couples"
@@ -47,6 +49,7 @@ class TravelerTypeFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="solo-checkbox"
                 name="solo"
                 type="checkbox"
                 value="Solo"
@@ -60,6 +63,7 @@ class TravelerTypeFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="business-checkbox"
                 name="business"
                 type="checkbox"
                 value="Business"
@@ -73,6 +77,7 @@ class TravelerTypeFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="friends-checkbox"
                 name="friends"
                 type="checkbox"
                 value="Friends"
