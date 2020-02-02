@@ -40,9 +40,11 @@ body {
   color: black;
   background-color: #fff;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tab-name {
+  font-family: Tahoma;
   text-align: center;
 }
 
@@ -52,11 +54,12 @@ body {
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows: minmax(0%, auto);
   background-color: #f9f9f9;
+  cursor: pointer;
 }
 
 .nav-icon {
   grid-row: 1/2;
-  max-width: 30px;
+  max-width: 50px;
   height: auto;
   width: auto;
   height: auto;
@@ -88,6 +91,7 @@ body {
 
 .review-header-text {
   font-size: 28px;
+  font-family: Tahoma;
 }
 .write-review-button {
   position: relative;
@@ -135,17 +139,23 @@ body {
 .filter-header {
   padding-top: 6px;
   padding-left: 20px;
-  margin-bottom: 5px;
-  font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   color: #000a12;
 }
 
-.progress-bar {
-  background: #078171;
+.progress {
   border-radius: 2px;
   height: 12px;
+}
+
+.progress::-webkit-progress-bar {
+  background: #e5e5e5;
+  border-radius: 2px;
+}
+.progress::-webkit-progress-value {
+  background: #078171;
+  border-radius: 2px;
 }
 .checkbox {
   list-style: none;
@@ -204,20 +214,21 @@ body {
 .single-review-header {
   display: grid;
   grid-template-columns: 1fr 9fr;
-  grid-template-rows: 1fr 1fr;
-  height: 40%;
+  grid-template-rows: 1fr 2fr;
+  height: 100%;
   grid-auto-rows: minmax(5px, 5px);
   position: relative;
 }
 .avatar {
-  grid-column: 1;
+  grid-column: 1/2;
   grid-row: 1/3;
   grid-auto-rows: minmax(100px, auto);
   width: 45px;
   height: 45px;
+  padding-left: 10px;
 }
 /* .user-info-top {
-  grid-column: 2/10;
+  grid-column: 3/10;
   grid-row: 1;
 }
 .user-info-top {
@@ -229,24 +240,31 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 50%;
-  padding-left: 10px;
   cursor: pointer;
 }
 
 .review-body {
   background-color: #f9f9f9;
 }
-
+.username:hover {
+  text-decoration: underline;
+  cursor: hand;
+  cursor: pointer;
+}
 .username,
 .date-of-stay {
   font-weight: 700;
   color: #000a12;
+  font-family: Tahoma;
+  font-size: 14px;
+  line-height: 18px;
 }
 .review-date,
 .stay-date {
   font-size: 14px;
   line-height: 18px;
   color: #4a4a4a;
+  font-family: Tahoma;
 }
 .user-list li {
   float: left;
@@ -271,8 +289,10 @@ body {
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
+  font-family: Tahoma;
   line-height: 22px;
   color: #000a12;
+  cursor: pointer;
 }
 .review-text {
   padding-left: 10px;
@@ -280,11 +300,14 @@ body {
   color: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
+  font-family: Tahoma;
 }
 
 .review-stay-data {
   padding-top: 30px;
   padding-left: 10px;
+  padding-bottom: 10px;
+  font-family: Tahoma;
 }
 
 .dots {
@@ -312,7 +335,7 @@ body {
   display: block;
   position: relative;
   padding-left: 30px;
-  margin-bottom: 12px;
+  margin-bottom: 3px;
   cursor: pointer;
   font-size: 14px;
   -webkit-user-select: none;
@@ -337,15 +360,14 @@ body {
   left: 20px;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  border-radius: 2px;
+  background-color: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4a4a4a;
 }
 
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-
-/* When the checkbox is checked, add a blue background */
+/* When the checkbox is checked, add a green background */
 .container input:checked ~ .checkmark {
   background-color: #078171;
 }
@@ -364,13 +386,128 @@ body {
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-  left: 5px;
-  top: 3px;
+  left: 3px;
+  top: 1px;
   width: 5px;
-  height: 5px;
+  height: 8px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.review-bottom {
+  padding-left: 10px;
+  position: relative;
+  padding-top: 15px;
+  position: center;
+}
+.helpful-text {
+  padding-left: 30px;
+  padding-right: 25px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000a12;
+  font-family: Tahoma;
+}
+
+.thumb-up {
+  position: absolute;
+  bottom: 23px;
+}
+.share-text {
+  padding-left: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000a12;
+  font-family: Tahoma;
+}
+.share {
+  position: absolute;
+  bottom: 25px;
+}
+
+.review-disclaimer {
+  padding-left: 10px;
+  color: #767676;
+  font-size: 12px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  font-style: italic;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 6px;
+}
+
+.share-text:hover,
+.helpful-text:hover {
+  cursor: hand;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #078171;
+}
+
+.language-container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.language-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.language-checkmark {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  height: 15px;
+  width: 15px;
+  background-color: white;
+  border-radius: 50%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #4a4a4a;
+}
+
+/* When the radio button is checked, add a blue background */
+.language-container input:checked ~ .language-checkmark {
+  background-color: #078171;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.language-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.language-container input:checked ~ .language-checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.language-container .language-checkmark:after {
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 70%;
+  background: white;
 }

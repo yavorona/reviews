@@ -19,7 +19,7 @@ class TravelerTypeFilter extends React.Component {
         <div className="filter-header">Traveler type</div>
         <ul className="filter-table">
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="families"
                 type="checkbox"
@@ -27,11 +27,12 @@ class TravelerTypeFilter extends React.Component {
                 checked={this.props.currentTravelerTypeFilters.has("Families")}
                 onChange={this.handleChange}
               />
-              Families
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Families&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="couples"
                 type="checkbox"
@@ -39,11 +40,12 @@ class TravelerTypeFilter extends React.Component {
                 checked={this.props.currentTravelerTypeFilters.has("Couples")}
                 onChange={this.handleChange}
               />
-              Couples
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Couples&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="solo"
                 type="checkbox"
@@ -51,11 +53,12 @@ class TravelerTypeFilter extends React.Component {
                 checked={this.props.currentTravelerTypeFilters.has("Solo")}
                 onChange={this.handleChange}
               />
-              Solo
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solo&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="business"
                 type="checkbox"
@@ -63,11 +66,12 @@ class TravelerTypeFilter extends React.Component {
                 checked={this.props.currentTravelerTypeFilters.has("Business")}
                 onChange={this.handleChange}
               />
-              Business
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Business&nbsp;&nbsp;&nbsp;
             </label>
           </li>
           <li className="checkbox">
-            <label>
+            <label className="container">
               <input
                 name="friends"
                 type="checkbox"
@@ -75,7 +79,8 @@ class TravelerTypeFilter extends React.Component {
                 checked={this.props.currentTravelerTypeFilters.has("Friends")}
                 onChange={this.handleChange}
               />
-              Friends
+              <span className="checkmark"></span>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Friends&nbsp;&nbsp;&nbsp;
             </label>
           </li>
         </ul>
