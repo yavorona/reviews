@@ -6,13 +6,19 @@ class App extends React.Component {
     super(props);
     this.state = {
       view: "reviews",
-      reviews: []
+      reviews: [],
+      totalNumberOfReviews: ""
     };
+    this.setTotalNumberOfReviews = this.setTotalNumberOfReviews.bind(this);
   }
   changeView(option) {
     this.setState({
       view: option
     });
+  }
+
+  setTotalNumberOfReviews(numberOfReviews) {
+    this.setState({ totalNumberOfReviews: numberOfReviews });
   }
 
   render() {
@@ -29,7 +35,8 @@ class App extends React.Component {
               <img className="nav-icon" src="pen-and-paper.png"></img>
             </div>
             <div className="tab-name">
-              <span>Reviews</span>
+              <div> {this.state.totalNumberOfReviews}</div>
+              <div>Reviews</div>
             </div>
           </div>
           <div
@@ -42,7 +49,8 @@ class App extends React.Component {
               <img className="nav-icon" src="q_and_a.png"></img>
             </div>
             <div className="tab-name">
-              <span>Q+A</span>
+              <div> {this.state.totalNumberOfReviews}</div>
+              <div>Q+A</div>
             </div>
           </div>
 
@@ -58,12 +66,19 @@ class App extends React.Component {
               <img className="nav-icon" src="lightbolb.png"></img>
             </div>
             <div className="tab-name">
-              <span>Room tips</span>
+              <div> {this.state.totalNumberOfReviews}</div>
+              <div>Room tips</div>
             </div>
           </div>
         </div>
         <div className="main">
-          {this.state.view === "reviews" ? <ReviewsView /> : "IN PRODUCTION"}
+          {this.state.view === "reviews" ? (
+            <ReviewsView
+              setTotalNumberOfReviews={this.setTotalNumberOfReviews}
+            />
+          ) : (
+            "IN PRODUCTION"
+          )}
         </div>
       </div>
     );
