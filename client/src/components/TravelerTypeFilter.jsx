@@ -3,9 +3,6 @@ import React from "react";
 class TravelerTypeFilter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isExcellent: false
-    };
     this.handleChange = this.handleChange.bind(this);
   }
 

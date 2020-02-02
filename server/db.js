@@ -31,7 +31,7 @@ const lorem = new LoremIpsum({
   },
   wordsPerSentence: {
     max: 20,
-    min: 8
+    min: 10
   }
 });
 
@@ -78,15 +78,15 @@ var getRandomComment = () => {
     helpfulVotes: Math.floor(Math.random() * Math.floor(20)),
     profileImage: "avatar.jpeg",
     postDate: randomDate(new Date(2019, 0, 1), new Date()),
-    reviewScore: getRandomNumber(1, 5),
+    reviewScore: getRandomNumber(0, 5),
     reviewTitle: lorem.generateWords(2),
-    reviewText: lorem.generateSentences(getRandomNumber(3, 10)),
+    reviewText: lorem.generateSentences(getRandomNumber(10, 30)),
     stayDate: randomDate(new Date(2019, 0, 1), new Date())
   };
 };
 for (var i = 0; i < 100; i++) {
   var randomComments = [];
-  for (var j = 1; j <= getRandomNumber(1, 15); j++) {
+  for (var j = 1; j <= getRandomNumber(50, 100); j++) {
     var randomComment = getRandomComment();
     randomComments.push(randomComment);
   }
