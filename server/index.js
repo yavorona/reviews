@@ -8,13 +8,11 @@ app.use("/:id", express.static(path.join(__dirname, "../client/dist")));
 app.use(express.json());
 
 app.get("/reviews/hotels/:hotelId", (req, res) => {
-  console.log(req.params.hotelId);
   db.getReviewsbyID(req.params.hotelId, (err, results) => {
     if (err) {
       console.log(err);
       res.sendStatus(500);
     } else {
-      console.log(results);
       res.send(results);
     }
   });

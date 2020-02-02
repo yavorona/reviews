@@ -1,7 +1,7 @@
 import React from "react";
 import ReviewsControls from "./ReviewsControls.jsx";
 import Reviews from "./Reviews.jsx";
-import { set } from "mongoose";
+// import { set } from "mongoose";
 const axios = require("axios");
 
 class ReviewsView extends React.Component {
@@ -11,7 +11,8 @@ class ReviewsView extends React.Component {
       hotelReviewsData: [],
       currentRatingFilters: new Set([]),
       currentTravelerTypeFilters: new Set([]),
-      currentTimeOfYearFilters: new Set([])
+      currentTimeOfYearFilters: new Set([]),
+      currentLanguageFilters: new Set([])
     };
     this.handleRatingFilterChange = this.handleRatingFilterChange.bind(this);
     this.handleTravalersTypeFilterChange = this.handleTravalersTypeFilterChange.bind(
@@ -114,21 +115,17 @@ class ReviewsView extends React.Component {
     axios
       .get("/reviews/hotels" + location.pathname)
       .then(response => {
-        console.log("here is your response", response.data.reviews);
-        // handle success
         this.setState({
           hotelReviewsData: response.data.reviews
         });
       })
       .catch(error => {
-        // handle error
         console.log(error);
       });
   }
 
   render() {
     var filteredReviews = this.getFilterReviews();
-    console.log("here is what you render", this.state.hotelReviewsData);
     return (
       <div className="reviews-view">
         <ReviewsControls

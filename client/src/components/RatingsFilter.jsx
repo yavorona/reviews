@@ -18,6 +18,7 @@ class RatingsFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="excellent-checkbox"
                 name="excellent"
                 type="checkbox"
                 value="5"
@@ -35,6 +36,7 @@ class RatingsFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="very-good-checkbox"
                 name="very-good"
                 type="checkbox"
                 value="4"
@@ -52,6 +54,7 @@ class RatingsFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="average-checkbox"
                 name="average"
                 type="checkbox"
                 value="3"
@@ -70,6 +73,7 @@ class RatingsFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="poor-checkbox"
                 name="poor"
                 type="checkbox"
                 value="2"
@@ -88,6 +92,7 @@ class RatingsFilter extends React.Component {
           <li className="checkbox">
             <label className="container">
               <input
+                className="terrible-checkbox"
                 name="terrible"
                 type="checkbox"
                 value="1"
