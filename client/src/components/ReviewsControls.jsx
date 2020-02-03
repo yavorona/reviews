@@ -18,10 +18,10 @@ class ReviewsControls extends React.Component {
     return (
       <div className="review-control-title">
         <div className="review-header">
-          <div className="header-divider">
+          <div className="reviews-divider">
             <h2 className="review-header-text">Reviews</h2>
           </div>
-          <div>
+          <div className="write-review">
             <button className="write-review-button">Write a Review</button>
           </div>
         </div>
@@ -29,6 +29,7 @@ class ReviewsControls extends React.Component {
         <div className="review-filters-wrap">
           <div className="ui-columns">
             <RatingsFilter
+              hotelReviewsData={this.props.hotelReviewsData}
               currentRatingFilters={this.props.currentRatingFilters}
               handleRatingFilterChange={this.props.handleRatingFilterChange}
             />

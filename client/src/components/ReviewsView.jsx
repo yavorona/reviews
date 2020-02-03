@@ -115,6 +115,8 @@ class ReviewsView extends React.Component {
     axios
       .get("/reviews/hotels" + location.pathname)
       .then(response => {
+        // debugger;
+        this.props.setTotalNumberOfReviews(response.data.reviews.length);
         this.setState({
           hotelReviewsData: response.data.reviews
         });

@@ -11,6 +11,25 @@ class RatingsFilter extends React.Component {
   }
 
   render() {
+    const totalNumberOfReviews = this.props.hotelReviewsData.length;
+    const excellentReviews = [];
+    const veryGoodReviews = [];
+    const averageGoodReviews = [];
+    const poorReviews = [];
+    const terribleReviews = [];
+    this.props.hotelReviewsData.forEach(review => {
+      if (review.reviewScore === 5) {
+        excellentReviews.push(review.reviewScore);
+      } else if (review.reviewScore === 4) {
+        veryGoodReviews.push(review.reviewScore);
+      } else if (review.reviewScore === 3) {
+        averageGoodReviews.push(review.reviewScore);
+      } else if (review.reviewScore === 2) {
+        poorReviews.push(review.reviewScore);
+      } else if (review.reviewScore === 1) {
+        terribleReviews.push(review.reviewScore);
+      }
+    });
     return (
       <div className="rating">
         <div className="filter-header">Traveler rating</div>
@@ -28,8 +47,12 @@ class RatingsFilter extends React.Component {
               <span className="checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Excellent &nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress className="progress" value="15" max="20"></progress>
-                &nbsp;&nbsp;&nbsp;15
+                <progress
+                  className="progress"
+                  value={excellentReviews.length}
+                  max={totalNumberOfReviews}
+                ></progress>
+                &nbsp;&nbsp;&nbsp;{excellentReviews.length}
               </span>
             </label>
           </li>
@@ -44,10 +67,14 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good &nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good&nbsp;
               <span className="rownumber">
-                <progress className="progress" value="4" max="20"></progress>
-                &nbsp;&nbsp;&nbsp;4
+                <progress
+                  className="progress"
+                  value={veryGoodReviews.length}
+                  max={totalNumberOfReviews}
+                ></progress>
+                &nbsp;&nbsp;&nbsp;{veryGoodReviews.length}
               </span>
             </label>
           </li>
@@ -65,8 +92,12 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Average
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress className="progress" value="11" max="20"></progress>
-                &nbsp;&nbsp;&nbsp;11
+                <progress
+                  className="progress"
+                  value={averageGoodReviews.length}
+                  max={totalNumberOfReviews}
+                ></progress>
+                &nbsp;&nbsp;&nbsp;{averageGoodReviews.length}
               </span>
             </label>
           </li>
@@ -84,8 +115,12 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poor
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress className="progress" value="7" max="20"></progress>
-                &nbsp;&nbsp;&nbsp;7
+                <progress
+                  className="progress"
+                  value={poorReviews.length}
+                  max={totalNumberOfReviews}
+                ></progress>
+                &nbsp;&nbsp;&nbsp;{poorReviews.length}
               </span>
             </label>
           </li>
@@ -103,8 +138,12 @@ class RatingsFilter extends React.Component {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Terrible
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
-                <progress className="progress" value="4" max="20"></progress>
-                &nbsp;&nbsp;&nbsp;4
+                <progress
+                  className="progress"
+                  value={terribleReviews.length}
+                  max={totalNumberOfReviews}
+                ></progress>
+                &nbsp;&nbsp;&nbsp;{terribleReviews.length}
               </span>
             </label>
           </li>
