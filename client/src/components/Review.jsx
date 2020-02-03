@@ -39,12 +39,17 @@ const Review = ({ review }) => {
         <div className="user-info">
           <ul className="user-list">
             <li className="user-location">{review.userLocation}</li>
-            <li className="user-contribution">
-              {review.numberOfContributions}
-              &nbsp;contributions
+            <li>
+              <span className="user-contribution">
+                {review.numberOfContributions}
+              </span>
+              <span className="user-contribution-text">
+                &nbsp;contributions
+              </span>
             </li>
-            <li className="helpful-votes">
-              {review.helpfulVotes}&nbsp;helpful votes
+            <li>
+              <span className="helpful-votes">{review.helpfulVotes}&nbsp;</span>
+              <span className="helpful-votes-text">helpful votes</span>
             </li>
           </ul>
         </div>
