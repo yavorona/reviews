@@ -285,11 +285,11 @@
 }
 
 .review-score {
-  padding: 10px;
+  padding: 30px;
 }
 
 .review-title {
-  padding-left: 10px;
+  padding-left: 30px;
   cursor: pointer;
   font-weight: 700;
   font-size: 18px;
@@ -299,8 +299,8 @@
   cursor: pointer;
 }
 .review-text {
-  padding-left: 10px;
-  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
   color: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
@@ -309,7 +309,7 @@
 
 .review-stay-data {
   padding-top: 30px;
-  padding-left: 10px;
+  padding-left: 30px;
   padding-bottom: 10px;
   font-family: Tahoma;
 }
@@ -402,7 +402,7 @@
 }
 
 .review-bottom {
-  padding-left: 10px;
+  padding-left: 30px;
   position: relative;
   padding-top: 15px;
   position: center;
@@ -435,7 +435,7 @@
 }
 
 .review-disclaimer {
-  padding-left: 10px;
+  padding-left: 30px;
   color: #767676;
   font-size: 12px;
   margin-top: 12px;
