@@ -67,7 +67,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress"
@@ -97,7 +97,7 @@ class RatingsFilter extends React.Component {
                   value={averageGoodReviews.length}
                   max={totalNumberOfReviews}
                 ></progress>
-                &nbsp;&nbsp;&nbsp;{averageGoodReviews.length}
+                &nbsp;&nbsp;{averageGoodReviews.length}
               </span>
             </label>
           </li>
@@ -113,7 +113,7 @@ class RatingsFilter extends React.Component {
               />
               <span className="checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poor
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress"

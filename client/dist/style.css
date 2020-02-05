@@ -226,16 +226,11 @@
   grid-auto-rows: minmax(100px, auto);
   width: 45px;
   height: 45px;
+  padding-left: 30px;
+}
+.user-info {
   padding-left: 10px;
 }
-/* .user-info-top {
-  grid-column: 3/10;
-  grid-row: 1;
-}
-.user-info-top {
-  grid-column: 2/10;
-  grid-row: 1;
-} */
 
 .avatar img {
   height: 100%;
