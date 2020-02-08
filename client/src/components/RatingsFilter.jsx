@@ -35,7 +35,7 @@ class RatingsFilter extends React.Component {
         <div className="filter-header">Traveler rating</div>
         <ul className="filter-table">
           <li className="checkbox">
-            <label className="container">
+            <label className="filter-container">
               <input
                 className="excellent-checkbox"
                 name="excellent"
@@ -57,7 +57,7 @@ class RatingsFilter extends React.Component {
             </label>
           </li>
           <li className="checkbox">
-            <label className="container">
+            <label className="filter-container">
               <input
                 className="very-good-checkbox"
                 name="very-good"
@@ -67,7 +67,7 @@ class RatingsFilter extends React.Component {
                 onChange={this.handleRatingFilterChange}
               />
               <span className="checkmark"></span>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Very Good&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress"
@@ -79,7 +79,7 @@ class RatingsFilter extends React.Component {
             </label>
           </li>
           <li className="checkbox">
-            <label className="container">
+            <label className="filter-container">
               <input
                 className="average-checkbox"
                 name="average"
@@ -97,12 +97,12 @@ class RatingsFilter extends React.Component {
                   value={averageGoodReviews.length}
                   max={totalNumberOfReviews}
                 ></progress>
-                &nbsp;&nbsp;{averageGoodReviews.length}
+                &nbsp;&nbsp;&nbsp;{averageGoodReviews.length}
               </span>
             </label>
           </li>
           <li className="checkbox">
-            <label className="container">
+            <label className="filter-container">
               <input
                 className="poor-checkbox"
                 name="poor"
@@ -113,7 +113,7 @@ class RatingsFilter extends React.Component {
               />
               <span className="checkmark"></span>
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Poor
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <span className="rownumber">
                 <progress
                   className="progress"
@@ -125,7 +125,7 @@ class RatingsFilter extends React.Component {
             </label>
           </li>
           <li className="checkbox">
-            <label className="container">
+            <label className="filter-container">
               <input
                 className="terrible-checkbox"
                 name="terrible"

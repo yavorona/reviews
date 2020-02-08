@@ -1,4 +1,5 @@
 .wrapper {
+  width: 800px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 10px;
@@ -7,7 +8,6 @@
 }
 
 .overall-reviews-body {
-  max-width: 60%;
   background-color: #f2f2f2;
   vertical-align: middle;
 }
@@ -28,6 +28,7 @@
 .review-filters-wrap {
   border: 1px solid #e5e5e5;
   border-top: 0 solid #e5e5e5;
+  padding-left: 10px;
 }
 
 .tab-icon {
@@ -232,7 +233,7 @@
   padding-left: 10px;
 }
 
-.avatar img {
+.avatar-image {
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -296,6 +297,7 @@
 .review-text {
   padding-left: 30px;
   padding-right: 30px;
+  padding-top: 30px;
   color: #4a4a4a;
   font-size: 16px;
   line-height: 20px;
@@ -331,7 +333,7 @@
 }
 
 /* The container */
-.container {
+.filter-container {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -345,7 +347,7 @@
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.filter-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -368,7 +370,7 @@
 }
 
 /* When the checkbox is checked, add a green background */
-.container input:checked ~ .checkmark {
+.filter-container input:checked ~ .checkmark {
   background-color: #078171;
 }
 
@@ -380,12 +382,12 @@
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.filter-container input:checked ~ .checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .checkmark:after {
+.filter-container .checkmark:after {
   left: 3px;
   top: 1px;
   width: 5px;
